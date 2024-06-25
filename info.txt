@@ -1,2 +1,0 @@
-laravel6の環境構築
-localhost:8000/publicでアクセス可能

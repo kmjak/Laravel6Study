@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\HelloController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,3 +15,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('hello/{msg?}',function($msg='anonymous'){
+//     return '<h1>Hello '.$msg.'</h1>';
+// });
+Route::get('hello/','HelloController@index');
+Route::get('hello/other','HelloController@other');
