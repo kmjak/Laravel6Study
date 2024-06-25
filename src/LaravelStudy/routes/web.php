@@ -18,5 +18,9 @@ Route::get('/', function () {
 // Route::get('hello/{msg?}',function($msg='anonymous'){
 //     return '<h1>Hello '.$msg.'</h1>';
 // });
-Route::get('hello/','HelloController@index');
-Route::get('hello/other','HelloController@other');
+Route::get('single/','SingleController');
+// Route::get('hello/','HelloController@index');
+// Route::get('hello/other','HelloController@other');]
+Route::get('hello/odd',"HelloController@odd");
+Route::get('hello/{name?}','HelloController@index');
+Route::post('hello/{name?}','HelloController@post');
