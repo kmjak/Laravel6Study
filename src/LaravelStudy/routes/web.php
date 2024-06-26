@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\HelloController;
+use App\Http\Middleware\HelloMiddleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +13,7 @@ use App\Http\Controllers\HelloController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -22,5 +24,5 @@ Route::get('single/','SingleController');
 // Route::get('hello/','HelloController@index');
 // Route::get('hello/other','HelloController@other');]
 Route::get('hello/odd',"HelloController@odd");
-Route::get('hello/{name?}','HelloController@index');
-Route::post('hello/{name?}','HelloController@post');
+Route::get('hello/','HelloController@index')->middleware(HelloMiddleware::class);
+Route::post('hello/','HelloController@post');
