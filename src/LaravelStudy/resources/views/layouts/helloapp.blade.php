@@ -28,5 +28,10 @@
             @yield("footer")
         </div>
     </ul>
+    @yield('test_content')
+    <h3>users</h3>
+    <ul>
+        @yield('users')
+    </ul>
 </body>
 </html>
