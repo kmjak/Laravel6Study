@@ -49,23 +49,10 @@ class HelloController extends Controller
     //     $response->setContent($html);
     //     return $response;
     // }
-    public function index()
+    public function index(Request $request)
     {
-        $data = [
-            [
-                'name'=>'山田太郎',
-                'mail'=>'yamada@tarou'
-            ],
-            [
-                'name'=>'田中花子',
-                'mail'=>'hanako@tanaka'
-            ],
-            [
-                'name'=>'鈴木幸子',
-                'mail'=>'sachi@ko'
-            ],
-        ];
-        return view('hello.index',['data'=>$data,'message'=>'Controller'],);
+
+        return view('hello.index');
     }
     public function odd()
     {

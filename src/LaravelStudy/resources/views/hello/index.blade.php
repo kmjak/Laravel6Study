@@ -21,20 +21,10 @@
     @include("components.message",['msg_title'=>'OK','msg_content'=>'sub view'])
 @endsection
 @section('test_content')
-    <p>Controller value<br>'message' = {{$message}}</p>
-    <p>ViewComposer value<br>'message' = {{$view_message}}</p>
+    <p>これは<middleware>google.com</middleware>へのリンクです</p>
+    <p>これは<middleware>yahho.co.jp</middleware>へのリンクです</p>
 @endsection
 
-<!-- @section('users')
-    @each('components.item',$data,'data')
-@endsection -->
-@section('users')
-    <table>
-        @foreach ($data as $d)
-            <tr><th>{{$d['name']}}</th><td>{{$d['mail']}}</td></tr>
-        @endforeach
-    </table>
-@endsection
 
 @section("footer")
     copyright 2024 kmjak
